@@ -1,0 +1,103 @@
+Q1
+
+hadoop jar MapSideJoin.jar /Spring2014_HW-1/input_HW-1/ratings.dat /tmp/pxc130230/MapSideJoin
+
+hadoop fs -rmr /tmp/pxc130230/MapSideJoin
+
+hadoop fs -cat /tmp/pxc130230/MapSideJoin/part-m-00000
+
+
+
+Q2
+
+User.userid and Rating.userId
+
+hadoop jar ./ReduceSideJoin.jar /Spring2014_HW-1/input_HW-1/users.dat  /Spring2014_HW-1/input_HW-1/ratings.dat /Spring2014_HW-1/input_HW-1/movies.dat  /tmp/pxc130230/ReduceSideJoin
+
+
+hadoop fs -rmr /tmp/pxc130230/ReduceSideJoin
+
+hadoop fs -ls /tmp/pxc130230/ReduceSideJoin
+
+
+hadoop fs -cat /tmp/pxc130230/ReduceSideJoin/part-r-00000
+
+
+
+For Ass
+
+Q1
+
+hadoop jar MapSideJoin.jar /Spring2014_HW-1/input_HW-1/ratings.dat /tmp/sxm136830/MapSideJoin
+
+hadoop fs -rmr /tmp/sxm136830/MapSideJoin
+
+hadoop fs -cat /tmp/sxm136830/MapSideJoin/part-m-00000
+
+
+Q2
+
+
+hadoop jar ./ReduceSideJoin.jar /Spring2014_HW-1/input_HW-1/users.dat  /Spring2014_HW-1/input_HW-1/ratings.dat /Spring2014_HW-1/input_HW-1/movies.dat  /tmp/sxm136830/output1
+
+
+hadoop fs -rmr /tmp/sxm136830/output1
+
+hadoop fs -ls /tmp/sxm136830/output1
+
+
+hadoop fs -cat /tmp/sxm136830/output1/part-r-00000
+
+
+
+4169    50      M       2314
+1680    25      M       1850
+4277    35      M       1743
+1941    35      M       1595
+1181    35      M       1521
+889     45      M       1518
+3618    56      M       1344
+2063    25      M       1323
+1150    25      F       1302
+1015    35      M       1286
+
+
+
+
+/Spring2014_HW-1/input_HW-1
+
+
+
+
+
+attempt_201402251659_2740_m_000000_2: 5816
+attempt_201402251659_2740_m_000000_2: 5816
+attempt_201402251659_2740_m_000000_2: 5816
+attempt_201402251659_2740_m_000000_2: 5816
+attempt_201402251659_2740_m_000000_2: 5816
+attempt_201402251659_2740_m_000000_2: 5816
+attempt_201402251659_2740_m_000000_2: 4169
+attempt_201402251659_2740_m_000000_2: 4169
+attempt_201402251659_2740_m_000000_2: 4169
+attempt_201402251659_2740_m_000000_2: 4169
+attempt_201402251659_2740_m_000000_2: 4169
+attempt_201402251659_2740_m_000000_2: 4169
+attempt_201402251659_2740_m_000000_2: 4169
+attempt_201402251659_2740_m_000000_2: 4169
+attempt_201402251659_2740_m_000000_2: 4169
+attempt_201402251659_2740_m_000000_2: 4169
+attempt_201402251659_2740_m_000000_2: 4169
+attempt_201402251659_2740_m_000000_2: 4169
+attempt_201402251659_2740_m_000000_2: 4169
+attempt_201402251659_2740_m_000000_2: 4169
+14/03/09 07:00:32 INFO mapred.JobClient: Job complete: job_201402251659_2740
+14/03/09 07:00:32 INFO mapred.JobClient: Counters: 8
+14/03/09 07:00:32 INFO mapred.JobClient:   Job Counters
+14/03/09 07:00:32 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=27759
+14/03/09 07:00:32 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/09 07:00:32 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/09 07:00:32 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/09 07:00:32 INFO mapred.JobClient:     Launched map tasks=4
+14/03/09 07:00:32 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/09 07:00:32 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/09 07:00:32 INFO mapred.JobClient:     Failed map tasks=1
